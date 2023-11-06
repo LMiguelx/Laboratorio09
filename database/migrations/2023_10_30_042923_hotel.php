@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
         // Tabla de habitaciones
-        Schema::create('habitaciones', function (Blueprint $table) {
+        Schema::create('habitacion', function (Blueprint $table) {
             $table->id();
             $table->string('numero')->unique();
             $table->string('tipo');
@@ -17,7 +17,7 @@ return new class extends Migration {
         });
 
         // Tabla de recepcionistas
-        Schema::create('recepcionistas', function (Blueprint $table) {
+        Schema::create('recepcionista', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
@@ -27,7 +27,7 @@ return new class extends Migration {
         });
 
         // Tabla de huéspedes
-        Schema::create('huespedes', function (Blueprint $table) {
+        Schema::create('huesped', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
